@@ -5,7 +5,9 @@ const cars = require("./cars.json");
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin : ["https://automatch-rcbq.onrender.com"]
+}));
 app.use(express.json());
 
 app.get("/cars", (req, res) => {
